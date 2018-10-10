@@ -81,4 +81,6 @@ etags:
 	cd .. && etags -f APMrover2/TAGS --lang=c++ $$(git ls-files APMrover2 libraries)
 
 clean:
-	@rm -fr $(BUILDROOT)
+	rm -fr $(BUILDROOT)
+wzs:
+	@echo $(SRCROOT)
