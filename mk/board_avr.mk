@@ -174,6 +174,7 @@ jtag-program:
 # Link the final object
 $(SKETCHELF):	$(SKETCHOBJS) $(LIBOBJS)
 	$(RULEHDR)
+	@echo LD_CMD =  "$(v)$(LD) $(LDFLAGS) -o $@ $^ $(LIBS)"
 	$(v)$(LD) $(LDFLAGS) -o $@ $^ $(LIBS)
 	$(v)cp $(SKETCHELF) $(BUILDELF)
 	@echo "Firmware is in $(BUILDELF)"
